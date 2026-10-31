@@ -11,7 +11,7 @@ export const DeliveryCoverageSection: React.FC = () => {
 
   const handleCorporateInquiry = () => {
     const text = encodeURIComponent(
-      `Hello Mount Abadares Fresh Water! I'd like to inquire about delivery coverage and bulk water orders in Yatta, Machakos.`
+      `Hello Mount Abadares Fresh Water! I'd like to inquire about delivery coverage and bulk water orders anywhere in Machakos County.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
@@ -24,13 +24,13 @@ export const DeliveryCoverageSection: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2">
             <Truck className="w-3.5 h-3.5" />
-            <span>Delivery in Yatta, Machakos</span>
+            <span>Delivery across Machakos County</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Delivery Coverage & Schedules
           </h2>
           <p className="text-base text-slate-600 mt-2 font-medium">
-            We currently serve Yatta, Machakos. Get free delivery when your order reaches 2 parcels or more. The offer applies to parcels across our product range, not only 20L bottles. Contact us to confirm your exact delivery location and timing.
+            We deliver across Machakos County. Orders of 50 parcels or more qualify for free delivery across our product range. Contact us to confirm your exact location and delivery timing.
           </p>
 
           {/* Quick Estate / City Search Bar */}
@@ -38,7 +38,7 @@ export const DeliveryCoverageSection: React.FC = () => {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
-              placeholder="Enter your area or village in Yatta..."
+              placeholder="Enter your area or village in Machakos..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white border border-slate-300 rounded-xl focus:outline-hidden focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 shadow-xs"
