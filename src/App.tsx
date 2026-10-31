@@ -78,7 +78,7 @@ export default function App() {
         <span className="flex items-center gap-1.5 font-semibold text-emerald-200">
           <Truck className="w-3.5 h-3.5" /> FREE DELIVERY:
         </span>
-        <span>Order 2 or more 20L bottles today for same-day free delivery in Nairobi & Central Region!</span>
+        <span>Free delivery from 2 parcels in Yatta, Machakos. Applies to qualifying parcel orders, not just 20L bottles.</span>
         <button
           onClick={handleFloatingWhatsApp}
           className="hidden sm:inline-flex items-center gap-1 text-emerald-300 hover:text-white underline font-semibold ml-1"
