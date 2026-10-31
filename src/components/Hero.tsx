@@ -57,19 +57,19 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
 
             {/* Sub-headline & Description */}
             <p className="text-base sm:text-lg md:text-xl text-slate-600 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed text-balance">
-              Pure from the Aberdares, for a healthier you. Sourced directly from pristine volcanic mountain aquifers and delivered fresh to your home, office, or event.
+              Carefully processed drinking water purified through a six-stage reverse osmosis process, hygienically packaged, and delivered to your home, office, or event.
             </p>
 
             {/* Key Quality Pillars (Inline metadata) */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-4 text-xs font-semibold text-slate-600 pt-1">
               <div className="flex items-center gap-1.5 text-emerald-800">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Naturally Alkaline pH 7.4</span>
+                <span>Reported pH 6.86</span>
               </div>
               <span className="text-slate-300">·</span>
               <div className="flex items-center gap-1.5 text-emerald-800">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Multi-Stage UV Purification</span>
+                <span>Six-Stage Reverse Osmosis</span>
               </div>
               <span className="text-slate-300">·</span>
               <div className="flex items-center gap-1.5 text-emerald-800">
@@ -174,7 +174,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs uppercase tracking-wider text-emerald-400 font-bold">
-                        Direct From Mountain Aquifers
+                        Six-Stage Reverse Osmosis
                       </p>
                       <p className="text-sm sm:text-base font-semibold text-white">
                         20L Dispenser • 5L Family • 1.5L • 1L • 500ml Pack
