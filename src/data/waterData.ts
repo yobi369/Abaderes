@@ -142,7 +142,7 @@ export const DELIVERY_ZONES: DeliveryZone[] = [
   {
     area: 'Machakos County (Machakos Town and surrounding areas)',
     leadTime: 'Confirmed when you place your order',
-    minOrderFree: 'Delivery fee confirmed on WhatsApp',
+    minOrderFree: 'Free delivery on orders of 50 parcels or more',
     days: 'Please confirm availability',
   },
 ];
@@ -193,6 +193,6 @@ export const FAQS = [
   },
   {
     question: 'What is the delivery turnaround time and fee?',
-    answer: 'Our current service area is around Machakos, Machakos County. Share your estate or delivery pin on WhatsApp so the team can confirm availability, delivery timing, and any delivery fee before you place the order.'
+    answer: 'Free delivery is available on orders of 50 parcels or more within the confirmed delivery area. For orders below 50 parcels, share your estate or delivery pin on WhatsApp so the team can confirm availability, delivery timing, and the delivery fee before you place the order.'
   }
 ];
