@@ -30,7 +30,7 @@ export const DeliveryCoverageSection: React.FC = () => {
             Delivery Coverage & Schedules
           </h2>
           <p className="text-base text-slate-600 mt-2 font-medium">
-            We deliver straight to your doorstep across Nairobi, Kiambu, and the Central Aberdare corridor.
+            Our current delivery base is around Machakos, Machakos County. Send us your estate or map pin and we will confirm whether your address is within the active delivery area.
           </p>
 
           {/* Quick Estate / City Search Bar */}
@@ -38,7 +38,7 @@ export const DeliveryCoverageSection: React.FC = () => {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
-              placeholder="Search your estate, town, or area (e.g. Westlands, Karen, Nyeri)..."
+              placeholder="Search your area (e.g. Machakos Town, Mlolongo, Athi River)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white border border-slate-300 rounded-xl focus:outline-hidden focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 shadow-xs"
