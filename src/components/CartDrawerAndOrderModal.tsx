@@ -125,12 +125,7 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
 
   const handleOnlineSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (cartItems.length === 0) return;
-    if (!validateForm()) return;
-
-    const generatedRef = 'MAF-' + Math.floor(100000 + Math.random() * 900000);
-    setOrderRef(generatedRef);
-    setIsSubmittedOnline(true);
+    handleWhatsAppCheckout();
   };
 
   const handleReset = () => {
@@ -491,11 +486,11 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
                 className="py-3 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-colors"
               >
                 <Truck className="w-4 h-4" />
-                <span>Place Order Online</span>
+                <span>Continue on WhatsApp</span>
               </button>
             </div>
             <p className="text-[11px] text-center text-slate-500">
-              Pay upon doorstep delivery via M-PESA or Cash.
+              Your order is sent to the team through WhatsApp. Payment and delivery are confirmed directly with dispatch.
             </p>
           </div>
         )}
