@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
               {COMPANY_INFO.contactPhones.map((phone) => (
                 <li key={phone} className="flex items-center gap-2">
                   <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <a href={`tel:${phone.replace(/\\s/g, '')}`} className="hover:text-white font-medium">{phone}</a>
+                  <a href={`tel:${phone.replace(/\s/g, '')}`} className="hover:text-white font-medium">{phone}</a>
                 </li>
               ))}
               <li className="flex items-center gap-2">
