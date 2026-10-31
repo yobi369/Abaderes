@@ -14,7 +14,7 @@ export const COMPANY_INFO = {
   phone: '+254 729 103 423',
   phoneDisplay: '0729 103 423',
   contactPhones: ['0729 103 423', '0725 532 264'],
-  whatsappNumber: '254757412618',
+  whatsappNumber: '254725532264',
   paymentTill: '5214731',
   email: 'orders@mountabadareswater.com',
   address: 'Kithimani, Yatta, Machakos County, Kenya',
