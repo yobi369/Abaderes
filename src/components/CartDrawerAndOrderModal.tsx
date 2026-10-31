@@ -38,7 +38,7 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
     phone: '',
     email: '',
     address: '',
-    cityArea: 'Nairobi',
+    cityArea: 'Machakos County',
     deliveryTime: 'morning',
     frequency: 'one-time',
     notes: '',
@@ -61,9 +61,10 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
     return acc + unitPrice * item.quantity;
   }, 0);
 
-  // Delivery fee: Free for subtotal >= 500 or >= 2 bottles, otherwise KSh 100
-  const deliveryFee = subtotal >= 500 || cartItems.some((i) => i.quantity >= 2) ? 0 : 100;
-  const grandTotal = subtotal + deliveryFee;
+  // Free delivery applies to orders of 50 parcels or more across Machakos County.
+  const parcelCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const deliveryFee = parcelCount >= 50 ? 0 : null;
+  const grandTotal = subtotal + (deliveryFee ?? 0);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -116,8 +117,10 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
       `\n*Items Ordered:*\n${itemsText}\n\n` +
       `*Subtotal:* ${COMPANY_INFO.currency} ${subtotal.toLocaleString()}\n` +
       `*Delivery:* ${deliveryFee === 0 ? 'FREE' : COMPANY_INFO.currency + ' ' + deliveryFee}\n` +
-      `*TOTAL:* ${COMPANY_INFO.currency} ${grandTotal.toLocaleString()}\n\n` +
-      `Please confirm delivery time and dispatch!`
+      `*TOTAL BEFORE DELIVERY:* ${COMPANY_INFO.currency} ${grandTotal.toLocaleString()}\n` +
+      `*M-Pesa Till:* ${COMPANY_INFO.paymentTill}\n` +
+      `*Delivery:* ${deliveryFee === 0 ? 'FREE (50+ parcels)' : 'Please confirm delivery fee with dispatch'}\n\n` +
+      `Please confirm the final amount and delivery details before payment!`
     );
 
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${message}`, '_blank');
@@ -362,7 +365,7 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
                       onChange={handleInputChange}
                       className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white"
                     >
-                      <option value="Nairobi">Nairobi Metro</option>
+                      <option value="Machakos County">Machakos County</option>
                       <option value="Kiambu">Kiambu / Ruiru / Thika</option>
                       <option value="Nyeri">Nyeri / Aberdares</option>
                       <option value="Naivasha">Naivasha / Nakuru</option>
@@ -458,11 +461,11 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
               <div className="flex justify-between text-slate-600">
                 <span>Delivery Fee</span>
                 <span className="font-semibold text-emerald-700">
-                  {deliveryFee === 0 ? 'FREE' : `${COMPANY_INFO.currency} ${deliveryFee}`}
+                  {deliveryFee === 0 ? 'FREE (50+ parcels)' : 'To be confirmed'}
                 </span>
               </div>
               <div className="flex justify-between text-sm font-bold text-slate-900 pt-1 border-t border-slate-200">
-                <span>Total Amount</span>
+                <span>{deliveryFee === null ? 'Subtotal (delivery to be confirmed)' : 'Total Amount'}</span>
                 <span className="font-mono text-emerald-800 text-base">
                   {COMPANY_INFO.currency} {grandTotal.toLocaleString()}
                 </span>
@@ -490,7 +493,7 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
               </button>
             </div>
             <p className="text-[11px] text-center text-slate-500">
-              Your order is sent to the team through WhatsApp. Payment and delivery are confirmed directly with dispatch.
+              Free delivery applies from 50 parcels across Machakos County. For smaller orders, dispatch will confirm the delivery fee. M-Pesa Till: {COMPANY_INFO.paymentTill}. Confirm the final amount with the team before paying.
             </p>
           </div>
         )}
