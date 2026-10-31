@@ -5,9 +5,9 @@ export const COMPANY_INFO = {
   legalName: 'Mount Abadares Fresh Water Ltd.',
   slogan: 'Pure Water. Better Everyday.',
   subSlogan: 'Pure from the Aberdares, For a healthier you.',
-  phone: '+254 712 345 678',
-  phoneDisplay: '+254 712 345 678',
-  whatsappNumber: '254712345678',
+  phone: '+254 790 380 309',
+  phoneDisplay: '0790 380 309',
+  whatsappNumber: '254790380309',
   email: 'orders@mountabadareswater.com',
   address: 'Aberdare Springs Depot, Nyeri-Nyahururu Road & Nairobi Central Hub',
   serviceHours: 'Monday – Saturday: 7:00 AM – 7:00 PM | Sunday: 9:00 AM – 4:00 PM',
@@ -171,7 +171,7 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     question: 'How do I place an order for refills or new bottles?',
-    answer: 'You can order directly using the WhatsApp button on this site, which creates an instant formatted message with your requested products and address, or use our online quick-checkout. You can also call our dispatch hotline at +254 712 345 678.'
+    answer: 'You can order directly using the WhatsApp button on this site, which creates an instant formatted message with your requested products and address, or use our online quick-checkout. You can also call our dispatch hotline using the order hotline.'
   },
   {
     question: 'How does the 20-Litre bottle refill exchange work?',
