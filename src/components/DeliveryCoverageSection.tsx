@@ -30,7 +30,7 @@ export const DeliveryCoverageSection: React.FC = () => {
             Delivery Coverage & Schedules
           </h2>
           <p className="text-base text-slate-600 mt-2 font-medium">
-            Our current delivery base is around Machakos, Machakos County. Send us your estate or map pin and we will confirm whether your address is within the active delivery area.
+            Our current delivery base is around Machakos, Machakos County. Orders of 50 parcels or more qualify for free delivery within the confirmed delivery area. For smaller orders, the delivery fee is confirmed on WhatsApp. Send us your estate or map pin so we can verify your address.
           </p>
 
           {/* Quick Estate / City Search Bar */}
