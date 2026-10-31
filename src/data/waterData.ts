@@ -13,7 +13,7 @@ export const COMPANY_INFO = {
   phoneDisplay: '0790 380 309',
   whatsappNumber: '254790380309',
   email: 'orders@mountabadareswater.com',
-  address: 'Aberdare Springs Depot, Nyeri-Nyahururu Road & Nairobi Central Hub',
+  address: 'Machakos, Machakos County, Kenya',
   serviceHours: 'Monday – Saturday: 7:00 AM – 7:00 PM | Sunday: 9:00 AM – 4:00 PM',
   currency: 'KSh',
 };
@@ -139,10 +139,12 @@ export const MINERAL_SPECS: MineralSpec[] = [
 ];
 
 export const DELIVERY_ZONES: DeliveryZone[] = [
-  { area: 'Nairobi Metro (Westlands, Kilimani, Karen, CBD, Parklands)', leadTime: 'Within 2–4 Hours', minOrderFree: '2+ Bottles / KSh 500', days: 'Mon – Sun' },
-  { area: 'Kiambu County (Kiambu Town, Ruiru, Thika, Kikuyu)', leadTime: 'Same Day (Order before 11 AM)', minOrderFree: '3+ Bottles / KSh 750', days: 'Mon – Sat' },
-  { area: 'Aberdare & Central (Nyeri, Nyahururu, Karatina, Murang’a)', leadTime: 'Same Day Morning / Afternoon', minOrderFree: '2+ Bottles / KSh 500', days: 'Mon – Sat' },
-  { area: 'Rift Valley Corridor (Naivasha, Nakuru)', leadTime: 'Next Day Scheduled Runs', minOrderFree: '5+ Bottles / Corporate', days: 'Tue, Thu, Sat' },
+  {
+    area: 'Machakos County (Machakos Town and surrounding areas)',
+    leadTime: 'Confirmed when you place your order',
+    minOrderFree: 'Delivery fee confirmed on WhatsApp',
+    days: 'Please confirm availability',
+  },
 ];
 
 export const TESTIMONIALS = [
@@ -191,6 +193,6 @@ export const FAQS = [
   },
   {
     question: 'What is the delivery turnaround time and fee?',
-    answer: 'Within Nairobi and major Central Kenya urban hubs, orders placed before 11:00 AM are delivered same-day. Orders placed later arrive within 2–4 hours or the next morning. Delivery is completely FREE for 2 or more 20L bottles or orders above KSh 500.'
+    answer: 'Our current service area is around Machakos, Machakos County. Share your estate or delivery pin on WhatsApp so the team can confirm availability, delivery timing, and any delivery fee before you place the order.'
   }
 ];
