@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 import { COMPANY_INFO } from '../data/waterData';
 
 export const ContactSection: React.FC = () => {
@@ -141,15 +141,6 @@ export const ContactSection: React.FC = () => {
                 Complete the details below. Your message will open in WhatsApp so you can send it directly to the team.
               </p>
 
-              {sent ? (
-                <div className="py-10 text-center space-y-3 bg-emerald-50 rounded-xl border border-emerald-200 p-6">
-                  <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
-                  <h4 className="text-lg font-bold text-emerald-950">Message Received!</h4>
-                  <p className="text-xs text-emerald-800 max-w-sm mx-auto">
-                    Thank you, {formData.name}. Our dispatch coordinator is reviewing your request and will contact you shortly.
-                  </p>
-                </div>
-              ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-xs">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -233,7 +224,6 @@ export const ContactSection: React.FC = () => {
                     <span>Submit Enquiry</span>
                   </button>
                 </form>
-              )}
             </div>
           </div>
 
