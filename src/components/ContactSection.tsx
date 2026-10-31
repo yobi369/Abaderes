@@ -75,7 +75,7 @@ export const ContactSection: React.FC = () => {
                       onClick={handleWhatsAppDirect}
                       className="font-bold text-emerald-700 hover:underline text-left"
                     >
-                      Chat on WhatsApp: 0757 412 618
+                      Chat on WhatsApp: 0725 532 264
                     </button>
                   </div>
                 </div>
