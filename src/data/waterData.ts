@@ -13,7 +13,7 @@ export const COMPANY_INFO = {
   phoneDisplay: '0790 380 309',
   whatsappNumber: '254790380309',
   email: 'orders@mountabadareswater.com',
-  address: 'Machakos, Machakos County, Kenya',
+  address: 'Yatta, Machakos County, Kenya',
   serviceHours: 'Monday – Saturday: 7:00 AM – 7:00 PM | Sunday: 9:00 AM – 4:00 PM',
   currency: 'KSh',
 };
@@ -140,9 +140,9 @@ export const MINERAL_SPECS: MineralSpec[] = [
 
 export const DELIVERY_ZONES: DeliveryZone[] = [
   {
-    area: 'Machakos County (Machakos Town and surrounding areas)',
+    area: 'Yatta, Machakos County',
     leadTime: 'Confirmed when you place your order',
-    minOrderFree: 'Free delivery on orders of 50 parcels or more',
+    minOrderFree: 'Free delivery from 2 parcels',
     days: 'Please confirm availability',
   },
 ];
@@ -193,6 +193,6 @@ export const FAQS = [
   },
   {
     question: 'What is the delivery turnaround time and fee?',
-    answer: 'Free delivery is available on orders of 50 parcels or more within the confirmed delivery area. For orders below 50 parcels, share your estate or delivery pin on WhatsApp so the team can confirm availability, delivery timing, and the delivery fee before you place the order.'
+    answer: 'Free delivery is available from 2 parcels within the Yatta, Machakos delivery area. For orders below 2 parcels, share your exact location on WhatsApp so the team can confirm availability, delivery timing, and the delivery fee before you place the order.'
   }
 ];
