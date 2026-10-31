@@ -18,13 +18,13 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
   const getImageSrc = () => {
     switch (selectedView) {
       case 'mountain':
-        return '/src/assets/images/hero_aberdare_water_1793437534139.jpg';
+        return '/src/assets/images/hero_abadares_epic_1793438592348.jpg';
       case 'bottle':
-        return '/src/assets/images/product_20l_dispenser_1793437536452.jpg';
+        return '/src/assets/images/abadares_20l_badass_1793438592481.jpg';
       case 'poster':
         return '/assets/aistudio/Screenshot_20261031-115111_4a3e8b50.png';
       default:
-        return '/src/assets/images/hero_aberdare_water_1793437534139.jpg';
+        return '/src/assets/images/hero_abadares_epic_1793438592348.jpg';
     }
   };
 

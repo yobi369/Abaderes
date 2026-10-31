@@ -30,7 +30,7 @@ export const PRODUCTS: Product[] = [
       'Tamper-evident hygiene seal',
       'Compatible with top & bottom load dispensers'
     ],
-    image: '/src/assets/images/product_20l_dispenser_1793437536452.jpg',
+    image: '/src/assets/images/abadares_20l_badass_1793438592481.jpg',
     tag: 'Best Seller',
     popular: true,
   },
@@ -49,7 +49,7 @@ export const PRODUCTS: Product[] = [
       'Crystal clear mountain spring taste',
       '100% recyclable bottles'
     ],
-    image: '/src/assets/images/product_500ml_pack_1793437536415.jpg',
+    image: '/src/assets/images/abadares_500ml_pack_1793438594711.jpg',
     tag: 'Event Favorite',
     popular: true,
   },
@@ -68,7 +68,7 @@ export const PRODUCTS: Product[] = [
       'Fresh mountain spring water',
       'Convenient 12-pack case'
     ],
-    image: '/src/assets/images/product_1l_bottle_1793437537314.jpg',
+    image: '/src/assets/images/abadares_1l_bottle_1793438593937.jpg',
     tag: 'Active Hydration',
   },
   {
@@ -86,7 +86,7 @@ export const PRODUCTS: Product[] = [
       'Sturdy grip design',
       'Long-lasting shelf freshness'
     ],
-    image: '/src/assets/images/product_1l_bottle_1793437537314.jpg',
+    image: '/src/assets/images/abadares_1l_bottle_1793438593937.jpg',
   },
   {
     id: 'prod-5l',
@@ -121,7 +121,7 @@ export const PRODUCTS: Product[] = [
       'Food-grade silicone suction hose',
       'Direct snap-on fit for 20L bottles'
     ],
-    image: '/src/assets/images/product_20l_dispenser_1793437536452.jpg',
+    image: '/src/assets/images/abadares_20l_badass_1793438592481.jpg',
   }
 ];
 
