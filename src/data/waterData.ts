@@ -1,4 +1,8 @@
 import { Product, MineralSpec, DeliveryZone } from '../types';
+import bottle20L from '../assets/images/abadares_20l_badass_1793438592481.jpg';
+import pack500ml from '../assets/images/abadares_500ml_pack_1793438594711.jpg';
+import bottle1L from '../assets/images/abadares_1l_bottle_1793438593937.jpg';
+import bottle5L from '../assets/images/product_5l_bottle_1793437537428.jpg';
 
 export const COMPANY_INFO = {
   name: 'Mount Abadares Fresh Water',
@@ -30,7 +34,7 @@ export const PRODUCTS: Product[] = [
       'Tamper-evident hygiene seal',
       'Compatible with top & bottom load dispensers'
     ],
-    image: '/src/assets/images/abadares_20l_badass_1793438592481.jpg',
+    image: bottle20L,
     tag: 'Best Seller',
     popular: true,
   },
@@ -49,7 +53,7 @@ export const PRODUCTS: Product[] = [
       'Crystal clear mountain spring taste',
       '100% recyclable bottles'
     ],
-    image: '/src/assets/images/abadares_500ml_pack_1793438594711.jpg',
+    image: pack500ml,
     tag: 'Event Favorite',
     popular: true,
   },
@@ -68,7 +72,7 @@ export const PRODUCTS: Product[] = [
       'Fresh mountain spring water',
       'Convenient 12-pack case'
     ],
-    image: '/src/assets/images/abadares_1l_bottle_1793438593937.jpg',
+    image: bottle1L,
     tag: 'Active Hydration',
   },
   {
@@ -103,7 +107,7 @@ export const PRODUCTS: Product[] = [
       'Great for cooking & infant formula',
       'Space-saving refrigerator fit'
     ],
-    image: '/src/assets/images/product_5l_bottle_1793437537428.jpg',
+    image: bottle5L,
     popular: true,
   },
   {
