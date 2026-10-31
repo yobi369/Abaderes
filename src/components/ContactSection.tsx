@@ -60,7 +60,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <span className="text-slate-500 text-xs block">Order Hotline</span>
                     <div className="flex flex-col gap-1">{COMPANY_INFO.contactPhones.map((phone) => (
-                      <a key={phone} href={`tel:${phone.replace(/\\s/g, '')}`} className="font-bold text-slate-900 hover:text-emerald-700">{phone}</a>
+                      <a key={phone} href={`tel:${phone.replace(/\s/g, '')}`} className="font-bold text-slate-900 hover:text-emerald-700">{phone}</a>
                     ))}</div>
                   </div>
                 </div>
