@@ -9,9 +9,11 @@ export const COMPANY_INFO = {
   legalName: 'Mount Abadares Fresh Water Ltd.',
   slogan: 'Pure Water. Better Everyday.',
   subSlogan: 'Pure from the Aberdares, For a healthier you.',
-  phone: '+254 790 380 309',
-  phoneDisplay: '0790 380 309',
-  whatsappNumber: '254790380309',
+  phone: '+254 729 103 423',
+  phoneDisplay: '0729 103 423',
+  contactPhones: ['0729 103 423', '0725 532 264'],
+  whatsappNumber: '254757412618',
+  paymentTill: '5214731',
   email: 'orders@mountabadareswater.com',
   address: 'Yatta, Machakos County, Kenya',
   serviceHours: 'Monday – Saturday: 7:00 AM – 7:00 PM | Sunday: 9:00 AM – 4:00 PM',
@@ -40,18 +42,17 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'prod-500ml-pack',
-    name: '500 ml Pack (24 Bottles)',
-    size: '24 × 500ml',
+    name: '500ml Bottle',
+    size: '500ml',
     category: 'packs',
-    price: 550,
-    originalPrice: 650,
-    description: 'A shrink-wrapped case of 24 compact 500ml spring water bottles. Perfect for boardrooms, hospitality, conferences, sports teams, weddings, and daily grab-and-go hydration.',
-    bestFor: 'Events, Boardrooms, Conferences & Daily Commutes',
+    price: 300,
+    description: 'A convenient 500ml bottle of fresh drinking water for everyday hydration, travel, meetings, and events.',
+    bestFor: 'Everyday hydration, travel & events',
     features: [
-      '24 easy-grip bottles per pack',
-      'Reinforced shrink-wrap packaging',
-      'Crystal clear mountain spring taste',
-      '100% recyclable bottles'
+      'Convenient single-bottle size',
+      'Easy to carry on the go',
+      'Ideal for meetings and events',
+      'Ready-to-drink hydration'
     ],
     image: pack500ml,
     tag: 'Event Favorite',
@@ -59,36 +60,34 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'prod-1l-pack',
-    name: '1 Litre Bottle (Pack of 12)',
-    size: '12 × 1.0 Litre',
+    name: '1L Bottle',
+    size: '1 Litre',
     category: 'packs',
-    price: 600,
-    originalPrice: 700,
-    description: 'Pack of 12 full one-litre bottles. The sweet spot between portability and all-day hydration for active lifestyles, students, and family excursions.',
-    bestFor: 'Gym, Field Trips, Road Trips & Daily Workstations',
+    price: 330,
+    description: 'A practical one-litre bottle for workdays, school, travel, and everyday hydration.',
+    bestFor: 'Work, school & everyday hydration',
     features: [
-      'Optimal personal hydration volume',
-      'Ergonomic bottle contour',
-      'Fresh mountain spring water',
-      'Convenient 12-pack case'
+      'Convenient one-litre bottle',
+      'Easy to carry and store',
+      'Suitable for daily use',
+      'Ready-to-drink hydration'
     ],
     image: bottle1L,
     tag: 'Active Hydration',
   },
   {
     id: 'prod-1-5l-pack',
-    name: '1.5 Litre Bottle (Pack of 12)',
-    size: '12 × 1.5 Litres',
+    name: '1.5L Bottle',
+    size: '1.5 Litres',
     category: 'packs',
-    price: 720,
-    originalPrice: 840,
-    description: 'High-capacity 1.5L bottles delivering maximum daily hydration. Recommended for athletes, long-distance drivers, outdoor adventures, and dining tables.',
-    bestFor: 'Athletes, Fitness, Long Drives & Dining',
+    price: 350,
+    description: 'A larger 1.5-litre bottle for extended hydration at home, work, or on the move.',
+    bestFor: 'Home, work & travel',
     features: [
-      '1.5L generous volume per bottle',
-      'Naturally alkaline pH 7.4',
-      'Sturdy grip design',
-      'Long-lasting shelf freshness'
+      'Convenient 1.5-litre bottle',
+      'Suitable for sharing or extended use',
+      'Easy to store',
+      'Ready-to-drink hydration'
     ],
     image: '/src/assets/images/abadares_1l_bottle_1793438593937.jpg',
   },
@@ -97,8 +96,7 @@ export const PRODUCTS: Product[] = [
     name: '5 Litre Family Bottle',
     size: '5 Litres',
     category: 'bottles',
-    price: 180,
-    originalPrice: 220,
+    price: 380,
     description: 'Convenient 5-litre container with a sturdy integrated carry handle. Perfect for weekend getaways, camping, small apartments without a dispenser, or cooking with pure spring water.',
     bestFor: 'Family Kitchens, Camping, Cottages & Cooking',
     features: [
@@ -140,9 +138,9 @@ export const MINERAL_SPECS: MineralSpec[] = [
 
 export const DELIVERY_ZONES: DeliveryZone[] = [
   {
-    area: 'Yatta, Machakos County',
+    area: 'Machakos County',
     leadTime: 'Confirmed when you place your order',
-    minOrderFree: 'Free delivery from 2 parcels',
+    minOrderFree: 'Free delivery from 50 parcels',
     days: 'Please confirm availability',
   },
 ];
@@ -177,7 +175,7 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     question: 'How do I place an order for refills or new bottles?',
-    answer: 'You can order directly using the WhatsApp button on this site, which creates an instant formatted message with your requested products and address, or use our online quick-checkout. You can also call our dispatch hotline using the order hotline.'
+    answer: 'You can order directly using the WhatsApp button on this site, which creates an order message with your requested products and address. You can also call either of our listed contact numbers.'
   },
   {
     question: 'How does the 20-Litre bottle refill exchange work?',
@@ -193,6 +191,6 @@ export const FAQS = [
   },
   {
     question: 'What is the delivery turnaround time and fee?',
-    answer: 'Free delivery is available from 2 parcels within the Yatta, Machakos delivery area. For orders below 2 parcels, share your exact location on WhatsApp so the team can confirm availability, delivery timing, and the delivery fee before you place the order.'
+    answer: 'Free delivery is available for orders of 50 parcels or more across Machakos County. For orders below 50 parcels, contact the team on WhatsApp to confirm delivery availability, timing, and any applicable delivery fee.'
   }
 ];
