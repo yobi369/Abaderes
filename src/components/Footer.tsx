@@ -69,12 +69,12 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <h4 className="text-white font-bold text-sm tracking-tight">Order Hotline</h4>
             <ul className="space-y-2.5">
-              <li className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-white font-medium">
-                  {COMPANY_INFO.phoneDisplay}
-                </a>
-              </li>
+              {COMPANY_INFO.contactPhones.map((phone) => (
+                <li key={phone} className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <a href={`tel:${phone.replace(/\\s/g, '')}`} className="hover:text-white font-medium">{phone}</a>
+                </li>
+              ))}
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-white truncate">
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                 <span className="leading-tight">
-                  Yatta, Machakos County, Kenya
+                  Machakos County, Kenya
                 </span>
               </li>
             </ul>
