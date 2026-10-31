@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DELIVERY_ZONES, COMPANY_INFO } from '../data/waterData';
-import { Truck, MapPin, Search, CheckCircle, Clock, ShieldCheck, MessageCircle } from 'lucide-react';
+import { Truck, MapPin, Search, CheckCircle, Clock, MessageCircle } from 'lucide-react';
 
 export const DeliveryCoverageSection: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,7 +11,7 @@ export const DeliveryCoverageSection: React.FC = () => {
 
   const handleCorporateInquiry = () => {
     const text = encodeURIComponent(
-      `Hello Mount Abadares Fresh Water! I'd like to inquire about corporate / office scheduled water deliveries and dispenser leasing.`
+      `Hello Mount Abadares Fresh Water! I'd like to inquire about delivery coverage and bulk water orders in Yatta, Machakos.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
@@ -24,13 +24,13 @@ export const DeliveryCoverageSection: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2">
             <Truck className="w-3.5 h-3.5" />
-            <span>Fast & Reliable Delivery</span>
+            <span>Delivery in Yatta, Machakos</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Delivery Coverage & Schedules
           </h2>
           <p className="text-base text-slate-600 mt-2 font-medium">
-            Our current delivery base is around Machakos, Machakos County. Orders of 50 parcels or more qualify for free delivery within the confirmed delivery area. For smaller orders, the delivery fee is confirmed on WhatsApp. Send us your estate or map pin so we can verify your address.
+            We currently serve Yatta, Machakos. Get free delivery when your order reaches 2 parcels or more. The offer applies to parcels across our product range, not only 20L bottles. Contact us to confirm your exact delivery location and timing.
           </p>
 
           {/* Quick Estate / City Search Bar */}
@@ -38,7 +38,7 @@ export const DeliveryCoverageSection: React.FC = () => {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
-              placeholder="Search your area (e.g. Machakos Town, Mlolongo, Athi River)..."
+              placeholder="Enter your area or village in Yatta..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white border border-slate-300 rounded-xl focus:outline-hidden focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 shadow-xs"
@@ -91,7 +91,7 @@ export const DeliveryCoverageSection: React.FC = () => {
           ) : (
             <div className="col-span-2 text-center py-8 bg-white rounded-2xl border border-slate-200 p-6">
               <p className="text-sm font-semibold text-slate-800">No exact zone listed for "{searchQuery}"?</p>
-              <p className="text-xs text-slate-500 mt-1">We often accommodate custom routes! Message us on WhatsApp to verify your exact pin location.</p>
+              <p className="text-xs text-slate-500 mt-1">Message us on WhatsApp to confirm whether we can deliver to your exact location.</p>
               <button
                 onClick={handleCorporateInquiry}
                 className="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-lg text-xs font-bold hover:bg-emerald-700"
@@ -110,10 +110,10 @@ export const DeliveryCoverageSection: React.FC = () => {
               Corporate & Institution Accounts
             </span>
             <h3 className="text-xl sm:text-2xl font-bold">
-              Looking for regular bulk office or school deliveries?
+              Need regular bulk water deliveries?
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-              Enjoy tailored volume pricing, water dispenser sanitization maintenance, and 30-day corporate payment terms.
+              Contact us to discuss recurring supply and volume orders.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export const DeliveryCoverageSection: React.FC = () => {
             className="shrink-0 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center gap-2"
           >
             <MessageCircle className="w-4 h-4" />
-            <span>Request Corporate Quote</span>
+            <span>Inquire on WhatsApp</span>
           </button>
         </div>
 
