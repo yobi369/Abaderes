@@ -1,8 +1,27 @@
-import React from 'react';
-import { ShieldCheck, Truck, Droplets, RefreshCw, Sparkles, Clock, Check } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ShieldCheck, Truck, Droplets, RefreshCw, Sparkles, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import { TESTIMONIALS } from '../data/waterData';
 
 export const WhyChooseUsSection: React.FC = () => {
+  const [activeReview, setActiveReview] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused || TESTIMONIALS.length < 2) return;
+    const timer = window.setInterval(() => {
+      setActiveReview((current) => (current + 1) % TESTIMONIALS.length);
+    }, 4000);
+    return () => window.clearInterval(timer);
+  }, [isPaused]);
+
+  const showPreviousReview = () => {
+    setActiveReview((current) => (current - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  };
+
+  const showNextReview = () => {
+    setActiveReview((current) => (current + 1) % TESTIMONIALS.length);
+  };
+
   const advantages = [
     {
       icon: Droplets,
@@ -76,7 +95,7 @@ export const WhyChooseUsSection: React.FC = () => {
           })}
         </div>
 
-        {/* Real Customer Proof / Testimonials */}
+        {/* One-at-a-time automatically advancing customer reviews */}
         <div className="mt-16 pt-12 border-t border-slate-200/80">
           <div className="text-center mb-8">
             <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -85,37 +104,97 @@ export const WhyChooseUsSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-slate-900 mt-1">
               What Our Hydrated Customers Say
             </h3>
+            <p className="text-xs text-slate-500 mt-2">One customer story at a time</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
+          <div
+            className="relative max-w-3xl mx-auto"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onFocusCapture={() => setIsPaused(true)}
+            onBlurCapture={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                setIsPaused(false);
+              }
+            }}
+            aria-roledescription="carousel"
+            aria-label="Customer reviews"
+          >
+            <div className="overflow-hidden rounded-2xl">
               <div
-                key={t.id}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between"
+                className="flex transition-transform duration-700 ease-in-out motion-reduce:transition-none"
+                style={{ transform: `translateX(-${activeReview * 100}%)` }}
               >
-                <div>
-                  {/* 5 star rating */}
-                  <div className="flex items-center gap-1 text-amber-500 mb-3 text-xs">
-                    {[...Array(t.rating)].map((_, i) => (
-                      <span key={i}>★</span>
-                    ))}
-                  </div>
-                  <p className="text-xs text-slate-700 italic leading-relaxed">
-                    "{t.quote}"
-                  </p>
-                </div>
+                {TESTIMONIALS.map((t, index) => (
+                  <article
+                    key={t.id}
+                    className="min-w-full p-7 sm:p-10 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label={`Review ${index + 1} of ${TESTIMONIALS.length}`}
+                    aria-hidden={index !== activeReview}
+                  >
+                    <div>
+                      <div className="flex items-center justify-center gap-1 text-amber-500 mb-5 text-lg" aria-label={`${t.rating} out of 5 stars`}>
+                        {[...Array(t.rating)].map((_, i) => (
+                          <span key={i} aria-hidden="true">★</span>
+                        ))}
+                      </div>
+                      <p className="text-base sm:text-lg text-slate-700 italic leading-relaxed text-center">
+                        “{t.quote}”
+                      </p>
+                    </div>
 
-                <div className="mt-5 pt-4 border-t border-slate-200/70 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-emerald-700 text-white font-bold text-xs flex items-center justify-center shrink-0">
-                    {t.author.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-slate-900">{t.author}</h4>
-                    <p className="text-[11px] text-slate-500">{t.role} · {t.company}</p>
-                  </div>
-                </div>
+                    <div className="mt-7 pt-5 border-t border-slate-200/70 flex items-center justify-center gap-3">
+                      <div className="w-11 h-11 rounded-full bg-emerald-700 text-white font-bold text-sm flex items-center justify-center shrink-0">
+                        {t.author.charAt(0)}
+                      </div>
+                      <div className="text-left">
+                        <h4 className="text-sm font-bold text-slate-900">{t.author}</h4>
+                        <p className="text-xs text-slate-500">{t.role} · {t.company}</p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {TESTIMONIALS.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={showPreviousReview}
+                  className="absolute left-2 sm:-left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md text-slate-700 hover:text-emerald-700 hover:border-emerald-300 flex items-center justify-center transition-colors"
+                  aria-label="Previous customer review"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={showNextReview}
+                  className="absolute right-2 sm:-right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md text-slate-700 hover:text-emerald-700 hover:border-emerald-300 flex items-center justify-center transition-colors"
+                  aria-label="Next customer review"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </>
+            )}
+
+            <div className="flex items-center justify-center gap-2 mt-6" aria-label="Choose a customer review">
+              {TESTIMONIALS.map((t, index) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  onClick={() => setActiveReview(index)}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${index === activeReview ? 'w-7 bg-emerald-700' : 'w-2.5 bg-slate-300 hover:bg-emerald-400'}`}
+                  aria-label={`Show review ${index + 1}`}
+                  aria-current={index === activeReview ? 'true' : undefined}
+                />
+              ))}
+            </div>
+            <p className="text-center text-[11px] text-slate-400 mt-3">
+              {activeReview + 1} of {TESTIMONIALS.length} reviews · Changes every 4 seconds
+            </p>
           </div>
         </div>
 
