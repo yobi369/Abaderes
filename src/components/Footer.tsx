@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                 <span className="leading-tight">
-                  Aberdare Foothills, Nyeri & Nairobi Distribution Hubs
+                  Machakos, Machakos County, Kenya
                 </span>
               </li>
             </ul>
