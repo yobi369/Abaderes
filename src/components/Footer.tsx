@@ -1,7 +1,7 @@
 import React from 'react';
 import { Logo } from './Logo';
 import { COMPANY_INFO } from '../data/waterData';
-import { Phone, Mail, MapPin, Droplet, ShieldCheck, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -16,17 +16,6 @@ export const Footer: React.FC = () => {
               Mount Abadares Fresh Water is dedicated to delivering 100% natural, pristine mountain spring water sourced from protected aquifers in the Aberdare Ranges. Bottled at source under uncompromising hygienic standards.
             </p>
 
-            <div className="pt-1 flex items-center gap-4 text-emerald-400 text-xs font-semibold">
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4" /> KEBS Certified
-              </span>
-              <span>·</span>
-              <span className="flex items-center gap-1.5">
-                <Droplet className="w-4 h-4" /> Natural pH 7.4
-              </span>
-              <span>·</span>
-              <span>BPA-Free</span>
-            </div>
           </div>
 
           {/* Quick Links */}

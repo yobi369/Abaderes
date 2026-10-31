@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowRight, MessageCircle, ShieldCheck, Droplet, Sparkles, Truck, CheckCircle2, Eye } from 'lucide-react';
 import { COMPANY_INFO } from '../data/waterData';
+import mountainImage from '../assets/images/hero_abadares_epic_1793438592348.jpg';
+import bottleImage from '../assets/images/abadares_20l_badass_1793438592481.jpg';
 
 interface HeroProps {
   onOrderNowClick: () => void;
@@ -18,13 +20,13 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
   const getImageSrc = () => {
     switch (selectedView) {
       case 'mountain':
-        return '/src/assets/images/hero_abadares_epic_1793438592348.jpg';
+        return mountainImage;
       case 'bottle':
-        return '/src/assets/images/abadares_20l_badass_1793438592481.jpg';
+        return bottleImage;
       case 'poster':
         return '/assets/aistudio/Screenshot_20261031-115111_4a3e8b50.png';
       default:
-        return '/src/assets/images/hero_abadares_epic_1793438592348.jpg';
+        return mountainImage;
     }
   };
 
@@ -179,7 +181,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
                       </p>
                     </div>
                     <span className="hidden sm:inline-block px-2.5 py-1 text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 rounded-md">
-                      KEBS Certified
+                      Quality-focused water delivery
                     </span>
                   </div>
                 </div>

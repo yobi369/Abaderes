@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 import { COMPANY_INFO } from '../data/waterData';
 
 export const ContactSection: React.FC = () => {
@@ -10,16 +10,15 @@ export const ContactSection: React.FC = () => {
     subject: 'general',
     message: '',
   });
-  const [sent, setSent] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone) return;
-    setSent(true);
-    setTimeout(() => {
-      setSent(false);
-      setFormData({ name: '', phone: '', email: '', subject: 'general', message: '' });
-    }, 4000);
+    const message = encodeURIComponent(
+      `*WEBSITE ENQUIRY - MOUNT ABADARES FRESH WATER*\n\n` +
+      `*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n` +
+      `*Email:* ${formData.email || 'Not provided'}\n` +
+      `*Enquiry:* ${formData.subject}\n*Message:* ${formData.message || 'No additional message'}`
+    );
+    window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
   const handleWhatsAppDirect = () => {
@@ -76,7 +75,7 @@ export const ContactSection: React.FC = () => {
                       onClick={handleWhatsAppDirect}
                       className="font-bold text-emerald-700 hover:underline text-left"
                     >
-                      Chat on +254 712 345 678
+                      Chat on {COMPANY_INFO.phoneDisplay}
                     </button>
                   </div>
                 </div>
@@ -139,18 +138,9 @@ export const ContactSection: React.FC = () => {
                 Send Us a Message
               </h3>
               <p className="text-xs text-slate-500 mb-6">
-                Fill in the details below and our customer support supervisor will respond within 30 minutes.
+                Complete the details below. Your message will open in WhatsApp so you can send it directly to the team.
               </p>
 
-              {sent ? (
-                <div className="py-10 text-center space-y-3 bg-emerald-50 rounded-xl border border-emerald-200 p-6">
-                  <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
-                  <h4 className="text-lg font-bold text-emerald-950">Message Received!</h4>
-                  <p className="text-xs text-emerald-800 max-w-sm mx-auto">
-                    Thank you, {formData.name}. Our dispatch coordinator is reviewing your request and will contact you shortly.
-                  </p>
-                </div>
-              ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-xs">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -234,7 +224,6 @@ export const ContactSection: React.FC = () => {
                     <span>Submit Enquiry</span>
                   </button>
                 </form>
-              )}
             </div>
           </div>
 

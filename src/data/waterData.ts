@@ -1,13 +1,17 @@
 import { Product, MineralSpec, DeliveryZone } from '../types';
+import bottle20L from '../assets/images/abadares_20l_badass_1793438592481.jpg';
+import pack500ml from '../assets/images/abadares_500ml_pack_1793438594711.jpg';
+import bottle1L from '../assets/images/abadares_1l_bottle_1793438593937.jpg';
+import bottle5L from '../assets/images/product_5l_bottle_1793437537428.jpg';
 
 export const COMPANY_INFO = {
   name: 'Mount Abadares Fresh Water',
   legalName: 'Mount Abadares Fresh Water Ltd.',
   slogan: 'Pure Water. Better Everyday.',
   subSlogan: 'Pure from the Aberdares, For a healthier you.',
-  phone: '+254 712 345 678',
-  phoneDisplay: '+254 712 345 678',
-  whatsappNumber: '254712345678',
+  phone: '+254 790 380 309',
+  phoneDisplay: '0790 380 309',
+  whatsappNumber: '254790380309',
   email: 'orders@mountabadareswater.com',
   address: 'Aberdare Springs Depot, Nyeri-Nyahururu Road & Nairobi Central Hub',
   serviceHours: 'Monday – Saturday: 7:00 AM – 7:00 PM | Sunday: 9:00 AM – 4:00 PM',
@@ -30,7 +34,7 @@ export const PRODUCTS: Product[] = [
       'Tamper-evident hygiene seal',
       'Compatible with top & bottom load dispensers'
     ],
-    image: '/src/assets/images/abadares_20l_badass_1793438592481.jpg',
+    image: bottle20L,
     tag: 'Best Seller',
     popular: true,
   },
@@ -49,7 +53,7 @@ export const PRODUCTS: Product[] = [
       'Crystal clear mountain spring taste',
       '100% recyclable bottles'
     ],
-    image: '/src/assets/images/abadares_500ml_pack_1793438594711.jpg',
+    image: pack500ml,
     tag: 'Event Favorite',
     popular: true,
   },
@@ -68,7 +72,7 @@ export const PRODUCTS: Product[] = [
       'Fresh mountain spring water',
       'Convenient 12-pack case'
     ],
-    image: '/src/assets/images/abadares_1l_bottle_1793438593937.jpg',
+    image: bottle1L,
     tag: 'Active Hydration',
   },
   {
@@ -103,7 +107,7 @@ export const PRODUCTS: Product[] = [
       'Great for cooking & infant formula',
       'Space-saving refrigerator fit'
     ],
-    image: '/src/assets/images/product_5l_bottle_1793437537428.jpg',
+    image: bottle5L,
     popular: true,
   },
   {
@@ -171,7 +175,7 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     question: 'How do I place an order for refills or new bottles?',
-    answer: 'You can order directly using the WhatsApp button on this site, which creates an instant formatted message with your requested products and address, or use our online quick-checkout. You can also call our dispatch hotline at +254 712 345 678.'
+    answer: 'You can order directly using the WhatsApp button on this site, which creates an instant formatted message with your requested products and address, or use our online quick-checkout. You can also call our dispatch hotline using the order hotline.'
   },
   {
     question: 'How does the 20-Litre bottle refill exchange work?',
