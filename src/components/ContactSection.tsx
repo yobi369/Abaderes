@@ -59,9 +59,9 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-slate-500 text-xs block">Order Hotline</span>
-                    <a href={`tel:${COMPANY_INFO.phone}`} className="font-bold text-slate-900 hover:text-emerald-700">
-                      {COMPANY_INFO.phoneDisplay}
-                    </a>
+                    <div className="flex flex-col gap-1">{COMPANY_INFO.contactPhones.map((phone) => (
+                      <a key={phone} href={`tel:${phone.replace(/\\s/g, '')}`} className="font-bold text-slate-900 hover:text-emerald-700">{phone}</a>
+                    ))}</div>
                   </div>
                 </div>
 
@@ -75,8 +75,20 @@ export const ContactSection: React.FC = () => {
                       onClick={handleWhatsAppDirect}
                       className="font-bold text-emerald-700 hover:underline text-left"
                     >
-                      Chat on {COMPANY_INFO.phoneDisplay}
+                      Chat on WhatsApp: 0757 412 618
                     </button>
+                  </div>
+                </div>
+
+
+                <div className="flex items-start gap-3.5">
+                  <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-700 shrink-0">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-slate-500 text-xs block">M-Pesa Till Number</span>
+                    <p className="font-bold text-slate-900">{COMPANY_INFO.paymentTill}</p>
+                    <p className="text-[11px] text-slate-500">Confirm your order and payment details with the team.</p>
                   </div>
                 </div>
 
