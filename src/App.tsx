@@ -21,14 +21,7 @@ import { CartDrawerAndOrderModal } from './components/CartDrawerAndOrderModal';
 import { MessageCircle, ShoppingBag, Truck, ChevronRight } from 'lucide-react';
 
 export default function App() {
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    // Pre-populate with 1x 20L bottle so the cart has an intuitive starting item
-    {
-      product: PRODUCTS[0],
-      quantity: 2,
-      isRefill: true,
-    },
-  ]);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const cartTotalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
