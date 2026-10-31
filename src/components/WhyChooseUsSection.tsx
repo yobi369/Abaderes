@@ -6,13 +6,13 @@ export const WhyChooseUsSection: React.FC = () => {
   const advantages = [
     {
       icon: Droplets,
-      title: 'Untouched Mountain Springs',
-      desc: 'Originates at high elevation in the Aberdare forest reserves, free from industrial runoff, pesticides, or urban pollutants.',
+      title: 'Six-Stage Reverse Osmosis',
+      desc: 'The packaged drinking water undergoes a six-stage reverse osmosis purification process designed to remove impurities.',
     },
     {
       icon: ShieldCheck,
-      title: 'BPA-Free, Sanitized Bottles',
-      desc: 'All 20L dispenser jugs undergo rigorous 7-stage automated thermal and ozone wash sterilization before every refill.',
+      title: 'Hygienic Packaging',
+      desc: 'The water is carefully processed and hygienically packaged under the company’s stated quality standards.',
     },
     {
       icon: Truck,
@@ -31,8 +31,8 @@ export const WhyChooseUsSection: React.FC = () => {
     },
     {
       icon: Sparkles,
-      title: 'Optimal Bio-Availability',
-      desc: 'Natural minerals dissolved organically through volcanic rock, creating an exceptionally smooth, crisp mouthfeel.',
+      title: 'Reported Water Profile',
+      desc: 'The product profile lists calcium, magnesium, sodium, potassium, manganese, chloride, sulfate, nitrate, TDS and pH.',
     },
   ];
 
