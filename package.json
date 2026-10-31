@@ -1,7 +1,7 @@
 {
-  "name": "react-example",
+  "name": "mount-abadares-fresh-water",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
@@ -32,5 +32,6 @@
     "tsx": "^4.21.0",
     "typescript": "^7.0.2",
     "@types/express": "^4.17.21"
-  }
+  },
+  "description": "Responsive water delivery storefront with product catalogue, cart and WhatsApp ordering."
 }
