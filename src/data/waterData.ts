@@ -6,7 +6,9 @@ import bottle5L from '../assets/images/product_5l_bottle_1793437537428.jpg';
 
 export const COMPANY_INFO = {
   name: 'Mount Abadares Fresh Water',
-  legalName: 'Mount Abadares Fresh Water Ltd.',
+  legalName: 'Kibali Traders Enterprise',
+  postalAddress: 'P.O. Box 113 90 124 Yatta',
+  location: 'Kithimani, Yatta, Machakos County',
   slogan: 'Pure Water. Better Everyday.',
   subSlogan: 'Pure from the Aberdares, For a healthier you.',
   phone: '+254 729 103 423',
@@ -15,7 +17,7 @@ export const COMPANY_INFO = {
   whatsappNumber: '254757412618',
   paymentTill: '5214731',
   email: 'orders@mountabadareswater.com',
-  address: 'Yatta, Machakos County, Kenya',
+  address: 'Kithimani, Yatta, Machakos County, Kenya',
   serviceHours: 'Monday – Saturday: 7:00 AM – 7:00 PM | Sunday: 9:00 AM – 4:00 PM',
   currency: 'KSh',
 };
@@ -128,12 +130,16 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const MINERAL_SPECS: MineralSpec[] = [
-  { name: 'pH Level', amount: '7.4 – 7.6', benefit: 'Naturally balanced alkaline pH for smooth taste and metabolic wellness' },
-  { name: 'Calcium (Ca²⁺)', amount: '14.2 mg/L', benefit: 'Supports strong bones and healthy cardiovascular function' },
-  { name: 'Magnesium (Mg²⁺)', amount: '6.8 mg/L', benefit: 'Aids muscular recovery, energy synthesis, and crisp mouthfeel' },
-  { name: 'Potassium (K⁺)', amount: '2.4 mg/L', benefit: 'Essential cellular electrolyte supporting hydration balance' },
-  { name: 'Bicarbonates (HCO₃⁻)', amount: '48.0 mg/L', benefit: 'Natural digestive buffer reducing bodily acidity' },
-  { name: 'Total Dissolved Solids (TDS)', amount: '85 mg/L', benefit: 'Light, silky, non-heavy mineral profile with pristine clarity' },
+  { name: 'pH', amount: '6.86', benefit: 'Reported water pH' },
+  { name: 'Calcium', amount: '4.6 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Magnesium', amount: '1.4 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Sodium', amount: '4.4 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Potassium', amount: '0.2 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Manganese', amount: '2.6 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Chloride', amount: '0.3 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Sulfate', amount: '0.2 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Nitrate', amount: '0.3 (unit to confirm)', benefit: 'Reported composition value' },
+  { name: 'Total Dissolved Solids (TDS)', amount: '30 (unit to confirm)', benefit: 'Reported total dissolved solids value' },
 ];
 
 export const DELIVERY_ZONES: DeliveryZone[] = [
@@ -182,8 +188,8 @@ export const FAQS = [
     answer: 'On your first order, if you do not own a clean standard 20L poly-carbonate bottle, a one-time refundable bottle deposit of KSh 600 applies. On subsequent orders, our delivery driver collects your empty sanitized bottle and swaps it with a fresh sealed 20L bottle for only KSh 250.'
   },
   {
-    question: 'Where is Mount Abadares Fresh Water sourced from?',
-    answer: 'Our water is tapped directly from pristine, protected natural aquifers located deep within the Aberdare Mountain forest ranges. The water undergoes natural volcanic rock filtration before undergoing our state-of-the-art multi-stage micro-filtration, UV sterilization, and touchless bottling in strict compliance with KEBS standards.'
+    question: 'How is Mount Abadares packaged drinking water purified?',
+    answer: 'Mount Abadares packaged drinking water undergoes a six-stage reverse osmosis purification process designed to remove impurities. It is carefully processed and hygienically packaged under the company’s stated quality standards. The business location is Kithimani, Yatta, Machakos County.'
   },
   {
     question: 'Do you offer scheduled weekly deliveries for offices or homes?',
