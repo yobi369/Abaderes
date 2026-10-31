@@ -34,13 +34,13 @@ export const AberdareSourceSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-100/70 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-2">
             <Mountain className="w-3.5 h-3.5" />
-            <span>Origin Story</span>
+            <span>Purification & Water Profile</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Pure From the Heart of the Aberdares
+            Carefully Purified. Hygienically Packaged.
           </h2>
           <p className="text-base text-slate-600 mt-2 font-medium">
-            Discover why our natural mountain spring water tastes extraordinarily clean, smooth, and revitalizing.
+            Mount Abadares packaged drinking water undergoes a six-stage reverse osmosis purification process and is hygienically packaged.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export const AberdareSourceSection: React.FC = () => {
               <div className="p-6 sm:p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                   <Droplet className="w-5 h-5 text-emerald-600" />
-                  <span>The 4-Stage Natural Spring Journey</span>
+                  <span>The Six-Stage Purification Process</span>
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -118,11 +118,11 @@ export const AberdareSourceSection: React.FC = () => {
             <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-xs">
               <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">Certified Mineral Analysis</h3>
-                  <p className="text-xs text-slate-500">Laboratory verified chemical and physical profile</p>
+                  <h3 className="text-lg font-bold text-slate-900">Reported Water Composition</h3>
+                  <p className="text-xs text-slate-500">Values supplied for the product profile; mineral units to be confirmed</p>
                 </div>
                 <span className="px-2.5 py-1 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 rounded-md">
-                  pH 7.4 Alkaline
+                  pH 6.86
                 </span>
               </div>
 
@@ -143,7 +143,7 @@ export const AberdareSourceSection: React.FC = () => {
 
               <div className="mt-5 p-3 rounded-xl bg-sky-50 border border-sky-100 text-sky-900 text-[11px] flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-sky-600 shrink-0" />
-                <span>Zero chemical chlorine treatment. Zero artificial remineralization. 100% natural.</span>
+                <span>Six-stage reverse osmosis purification, followed by hygienic packaging.</span>
               </div>
             </div>
           </div>
