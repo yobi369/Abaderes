@@ -30,3 +30,102 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+
+/* Responsive layout safeguards */
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  main,
+  section,
+  header,
+  footer {
+    min-width: 0;
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Keep common section spacing compact while preserving comfortable touch targets. */
+  section > .mx-auto {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 3.25rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 7vw, 2.25rem);
+    line-height: 1.15;
+  }
+
+  p {
+    overflow-wrap: anywhere;
+  }
+
+  button,
+  a[role="button"] {
+    min-height: 2.75rem;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .fixed.bottom-6.right-6 {
+    right: 0.875rem;
+    bottom: max(0.875rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  section > .mx-auto {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
