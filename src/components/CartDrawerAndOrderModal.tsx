@@ -116,8 +116,8 @@ export const CartDrawerAndOrderModal: React.FC<CartDrawerAndOrderModalProps> = (
       (formData.notes ? `*Notes:* ${formData.notes}\n` : '') +
       `\n*Items Ordered:*\n${itemsText}\n\n` +
       `*Subtotal:* ${COMPANY_INFO.currency} ${subtotal.toLocaleString()}\n` +
-      `*Delivery:* ${deliveryFee === 0 ? 'FREE' : COMPANY_INFO.currency + ' ' + deliveryFee}\n` +
-      `*TOTAL BEFORE DELIVERY:* ${COMPANY_INFO.currency} ${grandTotal.toLocaleString()}\n` +
+      `*Delivery:* ${deliveryFee === 0 ? 'FREE (50+ parcels)' : 'To be confirmed by dispatch'}\n` +
+      `*Subtotal / amount before any delivery fee:* ${COMPANY_INFO.currency} ${subtotal.toLocaleString()}\n` +
       `*M-Pesa Till:* ${COMPANY_INFO.paymentTill}\n` +
       `*Delivery:* ${deliveryFee === 0 ? 'FREE (50+ parcels)' : 'Please confirm delivery fee with dispatch'}\n\n` +
       `Please confirm the final amount and delivery details before payment!`
