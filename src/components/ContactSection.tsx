@@ -10,16 +10,15 @@ export const ContactSection: React.FC = () => {
     subject: 'general',
     message: '',
   });
-  const [sent, setSent] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone) return;
-    setSent(true);
-    setTimeout(() => {
-      setSent(false);
-      setFormData({ name: '', phone: '', email: '', subject: 'general', message: '' });
-    }, 4000);
+    const message = encodeURIComponent(
+      `*WEBSITE ENQUIRY - MOUNT ABADARES FRESH WATER*\n\n` +
+      `*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n` +
+      `*Email:* ${formData.email || 'Not provided'}\n` +
+      `*Enquiry:* ${formData.subject}\n*Message:* ${formData.message || 'No additional message'}`
+    );
+    window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
   const handleWhatsAppDirect = () => {
@@ -76,7 +75,7 @@ export const ContactSection: React.FC = () => {
                       onClick={handleWhatsAppDirect}
                       className="font-bold text-emerald-700 hover:underline text-left"
                     >
-                      Chat on +254 712 345 678
+                      Chat on {COMPANY_INFO.phoneDisplay}
                     </button>
                   </div>
                 </div>
@@ -139,7 +138,7 @@ export const ContactSection: React.FC = () => {
                 Send Us a Message
               </h3>
               <p className="text-xs text-slate-500 mb-6">
-                Fill in the details below and our customer support supervisor will respond within 30 minutes.
+                Complete the details below. Your message will open in WhatsApp so you can send it directly to the team.
               </p>
 
               {sent ? (
