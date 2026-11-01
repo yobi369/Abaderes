@@ -60,7 +60,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold text-emerald-700 tracking-wider uppercase bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
+          <span className="text-xs font-bold text-blue-700 tracking-wider uppercase bg-blue-50 px-3 py-1 rounded-md border border-blue-200">
             Bottled at the Source
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
@@ -78,7 +78,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all ${
                   activeCategory === cat.id
-                    ? 'bg-white text-emerald-800 shadow-xs'
+                    ? 'bg-white text-blue-800 shadow-xs'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
                 }`}
               >
@@ -97,7 +97,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
             return (
               <div
                 key={product.id}
-                className="group flex flex-col bg-slate-50/70 rounded-2xl border border-slate-200 hover:border-emerald-300 hover:shadow-lg transition-all overflow-hidden"
+                className="group flex flex-col bg-slate-50/70 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all overflow-hidden"
               >
                 {/* Product Image Area */}
                 <div className="relative w-full h-56 bg-slate-900 overflow-hidden flex items-center justify-center">
@@ -115,7 +115,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
                   {/* Size & Tag Badges */}
                   <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start z-10">
                     {product.tag && (
-                      <span className="bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-md shadow-md">
+                      <span className="bg-blue-700 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-md shadow-md">
                         {product.tag}
                       </span>
                     )}
@@ -129,7 +129,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
                         {product.name}
                       </h3>
                     </div>
@@ -138,8 +138,8 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
                       {product.description}
                     </p>
 
-                    <div className="mt-3 py-1.5 px-2 bg-emerald-50/70 border border-emerald-100 rounded-md">
-                      <p className="text-[11px] font-semibold text-emerald-800">
+                    <div className="mt-3 py-1.5 px-2 bg-blue-50/70 border border-emerald-100 rounded-md">
+                      <p className="text-[11px] font-semibold text-blue-800">
                         <span className="font-bold">Best For:</span> {product.bestFor}
                       </p>
                     </div>
@@ -148,7 +148,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
                     <ul className="mt-3 space-y-1">
                       {product.features.slice(0, 3).map((feat, idx) => (
                         <li key={idx} className="flex items-center gap-1.5 text-xs text-slate-600">
-                          <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                          <Check className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -201,7 +201,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
                         className={`flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-bold transition-all shadow-xs ${
                           isAdded
                             ? 'bg-emerald-700 text-white'
-                            : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                            : 'bg-blue-700 hover:bg-blue-800 text-white'
                         }`}
                       >
                         {isAdded ? (
@@ -219,7 +219,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
 
                       <button
                         onClick={() => handleInstantWhatsApp(product)}
-                        className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-bold border border-emerald-600 text-emerald-700 bg-white hover:bg-emerald-50 transition-colors"
+                        className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-bold border border-blue-700 text-blue-700 bg-white hover:bg-blue-50 transition-colors"
                         title="Order this product directly on WhatsApp"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
