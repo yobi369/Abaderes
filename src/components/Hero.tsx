@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, MessageCircle, ShieldCheck, Droplet, Sparkles, Truck, CheckCircle2, Eye } from 'lucide-react';
+import { ArrowRight, MessageCircle, ShieldCheck, Droplet, Sparkles, Truck, CheckCircle2 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/waterData';
 import mountainImage from '../assets/images/hero_abadares_epic_1793438592348.jpg';
 import bottleImage from '../assets/images/abadares_20l_badass_1793438592481.jpg';
@@ -9,26 +9,14 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
-  const [selectedView, setSelectedView] = useState<'mountain' | 'bottle' | 'poster'>('mountain');
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   const handleWhatsAppOrder = () => {
-    const text = encodeURIComponent(`Hi Aqua Uno Fresh Water! I saw your website and would like to order fresh spring water for delivery.`);
+    const text = encodeURIComponent(`Hi Aqua Uno! I saw your website and would like to order fresh spring water for delivery.`);
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 
-  const getImageSrc = () => {
-    switch (selectedView) {
-      case 'mountain':
-        return mountainImage;
-      case 'bottle':
-        return bottleImage;
-      case 'poster':
-        return '/assets/aistudio/Screenshot_20261031-115111_4a3e8b50.png';
-      default:
-        return mountainImage;
-    }
-  };
+
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50 border-b border-slate-200/60 pt-6 pb-12 lg:pt-10 lg:pb-16">
@@ -51,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] text-balance">
               Aqua Uno <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-teal-600 to-sky-600">
-                Fresh Water
+                Pure. Safe. Refreshing.
               </span>
             </h1>
 
@@ -74,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
               <span className="text-slate-300">·</span>
               <div className="flex items-center gap-1.5 text-emerald-800">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Same-Day Doorstep Dispatch</span>
+                <span>Delivery availability confirmed on order</span>
               </div>
             </div>
 
@@ -116,55 +104,13 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
           {/* Right Column: Hero Visual Asset Display (From User's Provided Screenshots) */}
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xl group">
-              {/* Asset View Selector Switcher */}
-              <div className="absolute top-3 left-3 right-3 z-20 flex items-center justify-between">
-                <div className="inline-flex bg-slate-900/85 backdrop-blur-md p-1 rounded-lg border border-white/20 text-xs font-medium text-white shadow-lg">
-                  <button
-                    onClick={() => setSelectedView('mountain')}
-                    className={`px-3 py-1 rounded-md transition-colors ${
-                      selectedView === 'mountain'
-                        ? 'bg-emerald-600 text-white font-semibold'
-                        : 'text-slate-300 hover:text-white'
-                    }`}
-                  >
-                    Mountain Spring
-                  </button>
-                  <button
-                    onClick={() => setSelectedView('bottle')}
-                    className={`px-3 py-1 rounded-md transition-colors ${
-                      selectedView === 'bottle'
-                        ? 'bg-emerald-600 text-white font-semibold'
-                        : 'text-slate-300 hover:text-white'
-                    }`}
-                  >
-                    20L Dispenser
-                  </button>
-                  <button
-                    onClick={() => setSelectedView('poster')}
-                    className={`px-3 py-1 rounded-md transition-colors ${
-                      selectedView === 'poster'
-                        ? 'bg-emerald-600 text-white font-semibold'
-                        : 'text-slate-300 hover:text-white'
-                    }`}
-                  >
-                    Original Poster
-                  </button>
-                </div>
 
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="bg-slate-900/85 backdrop-blur-md p-1.5 rounded-lg border border-white/20 text-white/90 hover:text-white hover:bg-slate-800 transition-colors shadow-lg"
-                  title="Expand image preview"
-                >
-                  <Eye className="w-4 h-4" />
-                </button>
-              </div>
 
               {/* Main Visual Display */}
               <div className="relative w-full aspect-4/3 sm:aspect-16/10 max-h-[460px] overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
-                  src={getImageSrc()}
-                  alt="Aqua Uno Fresh Water Bottles and Mountain Source"
+                  src={mountainImage}
+                  alt="Aqua Uno Pure. Safe. Refreshing. Bottles and Mountain Source"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
                 />
@@ -194,8 +140,8 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
                 <Droplet className="w-5 h-5 fill-emerald-600" />
               </div>
               <div>
-                <p className="text-xs font-bold text-slate-900">Natural Spring Bottling</p>
-                <p className="text-[11px] text-slate-500">Untouched by human hands</p>
+                <p className="text-xs font-bold text-slate-900">Aqua Uno Water</p>
+                <p className="text-[11px] text-slate-500">Carefully processed drinking water</p>
               </div>
             </div>
           </div>
@@ -217,7 +163,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
             </div>
             <div className="overflow-auto p-2 flex items-center justify-center">
               <img
-                src={getImageSrc()}
+                src={mountainImage}
                 alt="Full Brand Asset"
                 className="max-h-[75vh] w-auto object-contain"
               />
