@@ -80,8 +80,8 @@ export const Logo: React.FC<LogoProps> = ({ className = '', variant = 'full', sh
         <span className={`font-extrabold tracking-tight uppercase leading-tight font-heading ${
           variant === 'light' ? 'text-white' : 'text-slate-900'
         } ${variant === 'compact' ? 'text-base' : 'text-base md:text-lg'}`}>
-          <span className="text-emerald-700">MOUNT ABADARES</span>
-          <span className="block text-sky-600 font-bold tracking-wider text-xs md:text-sm">FRESH WATER</span>
+          <span className="text-emerald-700">AQUA UNO</span>
+          <span className="block text-sky-600 font-bold tracking-wider text-xs md:text-sm">DRINKING WATER</span>
         </span>
         {showTagline && (
           <span className="text-[11px] text-slate-500 font-medium italic">
