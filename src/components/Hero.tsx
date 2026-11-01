@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleWhatsAppOrder = () => {
-    const text = encodeURIComponent(`Hi Mount Abadares Fresh Water! I saw your website and would like to order fresh spring water for delivery.`);
+    const text = encodeURIComponent(`Hi Aqua Uno Fresh Water! I saw your website and would like to order fresh spring water for delivery.`);
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 
@@ -49,7 +49,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] text-balance">
-              Mount Abadares <br />
+              Aqua Uno <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-teal-600 to-sky-600">
                 Fresh Water
               </span>
@@ -164,7 +164,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
               <div className="relative w-full aspect-4/3 sm:aspect-16/10 max-h-[460px] overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
                   src={getImageSrc()}
-                  alt="Mount Abadares Fresh Water Bottles and Mountain Source"
+                  alt="Aqua Uno Fresh Water Bottles and Mountain Source"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
                 />
@@ -207,7 +207,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-xs">
           <div className="relative max-w-4xl max-h-[90vh] bg-slate-900 rounded-2xl overflow-hidden shadow-2xl flex flex-col">
             <div className="p-3 bg-slate-800 text-white flex items-center justify-between text-sm font-semibold">
-              <span>Original Mount Abadares Brand Asset</span>
+              <span>Original Aqua Uno Brand Asset</span>
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded-md text-xs font-bold"
