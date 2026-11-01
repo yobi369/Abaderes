@@ -1,4 +1,4 @@
-# Mount Abadares Fresh Water
+# Aqua Uno
 
 A responsive React storefront for a bottled-water delivery business. Customers can browse the catalogue, build an order, enter delivery details and send the request to the business through WhatsApp.
 
@@ -62,7 +62,7 @@ Update the central values in `src/data/waterData.ts`:
 - `DELIVERY_ZONES`: supported delivery areas and delivery notes
 - `FAQS` and `TESTIMONIALS`: storefront content
 
-The currently configured WhatsApp destination is **0790 380 309** (international format: `254790380309`).
+The configured WhatsApp destination is **0757 241 618** (international format: `254757241618`).
 
 ## Order handling limitation
 
