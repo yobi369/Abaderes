@@ -46,7 +46,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onAddToCart })
     const qty = quantities[product.id] || 1;
     const total = qty * product.price;
     const message = encodeURIComponent(
-      `Hello Mount Abadares Fresh Water! I'd like to order:\n` +
+      `Hello Aqua Uno! I'd like to order:\n` +
       `- ${qty}x ${product.name} (${product.size})\n` +
       `Total: ${COMPANY_INFO.currency} ${total.toLocaleString()}\n\n` +
       `Please let me know how soon you can deliver to my location!`
