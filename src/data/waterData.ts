@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
       'Easy to store',
       'Ready-to-drink hydration'
     ],
-    image: '/src/assets/images/abadares_1l_bottle_1793438593937.jpg',
+    image: bottle1L,
   },
   {
     id: 'prod-5l',
@@ -188,8 +188,8 @@ export const FAQS = [
     answer: 'On your first order, if you do not own a clean standard 20L poly-carbonate bottle, a one-time refundable bottle deposit of KSh 600 applies. On subsequent orders, our delivery driver collects your empty sanitized bottle and swaps it with a fresh sealed 20L bottle for only KSh 250.'
   },
   {
-    question: 'How is Mount Abadares packaged drinking water purified?',
-    answer: 'Mount Abadares packaged drinking water undergoes a six-stage reverse osmosis purification process designed to remove impurities. It is carefully processed and hygienically packaged under the company’s stated quality standards. The business location is Kithimani, Yatta, Machakos County.'
+    question: 'How is Aqua Uno drinking water purified?',
+    answer: 'Aqua Uno drinking water undergoes a six-stage reverse osmosis purification process designed to remove impurities. It is carefully processed and hygienically packaged under the company’s stated quality standards. The business location is Kithimani, Yatta, Machakos County.'
   },
   {
     question: 'Do you offer scheduled weekly deliveries for offices or homes?',
