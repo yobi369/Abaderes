@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ArrowRight, MessageCircle, ShieldCheck, Droplet, Sparkles, Truck, CheckCircle2 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/waterData';
 import mountainImage from '../assets/images/hero_abadares_epic_1793438592348.jpg';
-import bottleImage from '../assets/images/abadares_20l_badass_1793438592481.jpg';
 
 interface HeroProps {
   onOrderNowClick: () => void;
@@ -148,29 +147,6 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
         </div>
       </div>
 
-      {/* Lightbox Modal for Full Screenshot Viewing */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-xs">
-          <div className="relative max-w-4xl max-h-[90vh] bg-slate-900 rounded-2xl overflow-hidden shadow-2xl flex flex-col">
-            <div className="p-3 bg-slate-800 text-white flex items-center justify-between text-sm font-semibold">
-              <span>Original Aqua Uno Brand Asset</span>
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded-md text-xs font-bold"
-              >
-                Close (ESC)
-              </button>
-            </div>
-            <div className="overflow-auto p-2 flex items-center justify-center">
-              <img
-                src={mountainImage}
-                alt="Full Brand Asset"
-                className="max-h-[75vh] w-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
