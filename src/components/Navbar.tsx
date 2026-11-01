@@ -22,7 +22,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const text = encodeURIComponent(`Hello Mount Abadares Fresh Water! I'd like to make an inquiry / place an order for fresh water delivery.`);
+    const text = encodeURIComponent(`Hello Aqua Uno! I'd like to make an inquiry / place an order for fresh water delivery.`);
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 
