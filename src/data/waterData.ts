@@ -5,12 +5,12 @@ import bottle1L from '../assets/images/abadares_1l_bottle_1793438593937.jpg';
 import bottle5L from '../assets/images/product_5l_bottle_1793437537428.jpg';
 
 export const COMPANY_INFO = {
-  name: 'Mount Abadares Fresh Water',
+  name: 'Aqua Uno',
   legalName: 'Kibali Traders Enterprise',
   postalAddress: 'P.O. Box 113 90 124 Yatta',
   location: 'Kithimani, Yatta, Machakos County',
   slogan: 'Pure Water. Better Everyday.',
-  subSlogan: 'Pure from the Aberdares, For a healthier you.',
+  subSlogan: 'Pure hydration for everyday life.',
   phone: '+254 757 241 618',
   phoneDisplay: '0757 241 618',
   contactPhones: ['0757 241 618'],
@@ -154,7 +154,7 @@ export const DELIVERY_ZONES: DeliveryZone[] = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    quote: 'We switched our 80-person corporate headquarters to Mount Abadares Fresh Water 6 months ago. Deliveries are punctual every Monday morning, and our employees continually praise the pure, refreshing taste.',
+    quote: 'We switched our 80-person corporate headquarters to Aqua Uno 6 months ago. Deliveries are punctual every Monday morning, and our employees continually praise the pure, refreshing taste.',
     author: 'Grace Mwangi',
     role: 'Operations Director',
     company: 'Apex Logistics Hub, Nairobi',
