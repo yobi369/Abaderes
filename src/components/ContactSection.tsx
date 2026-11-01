@@ -13,7 +13,7 @@ export const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = encodeURIComponent(
-      `*WEBSITE ENQUIRY - MOUNT ABADARES FRESH WATER*\n\n` +
+      `*WEBSITE ENQUIRY - AQUA UNO*\n\n` +
       `*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n` +
       `*Email:* ${formData.email || 'Not provided'}\n` +
       `*Enquiry:* ${formData.subject}\n*Message:* ${formData.message || 'No additional message'}`
@@ -22,7 +22,7 @@ export const ContactSection: React.FC = () => {
   };
 
   const handleWhatsAppDirect = () => {
-    const text = encodeURIComponent(`Hello Mount Abadares Fresh Water! I'd like to get in touch with your team.`);
+    const text = encodeURIComponent(`Hello Aqua Uno! I'd like to get in touch with your team.`);
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 
@@ -35,7 +35,7 @@ export const ContactSection: React.FC = () => {
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
-            Contact Mount Abadares
+            Contact Aqua Uno
           </h2>
           <p className="text-base text-slate-600 mt-2 font-medium">
             Reach out for prompt water deliveries, corporate contracts, or distributorship opportunities.
