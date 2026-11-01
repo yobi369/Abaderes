@@ -65,7 +65,7 @@ export default function App() {
 
   const handleFloatingWhatsApp = () => {
     const text = encodeURIComponent(
-      `Hello Mount Abadares Fresh Water! I'd like to place an order for fresh water delivery.`
+      `Hello Aqua Uno! I'd like to place an order for fresh water delivery.`
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
